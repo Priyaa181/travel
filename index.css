@@ -1,0 +1,39 @@
+#navbar{
+height: 50px;
+width: 100%;
+border: 2px solid black;
+ display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.series{
+    display: flex;
+    /* justify-content: center; */
+    gap: 10px;
+    list-style: none;
+   
+}
+.series li a{
+    text-decoration: none;
+}
+#navbar form{
+  
+    width: 250px;
+    background-color: aquamarine;
+}
+#navbar input{
+   
+    outline: none;
+    border: none;
+    background-color: aquamarine;
+}
+
+#navbar input::placeholder{
+    color: black;
+}
+img{
+   
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
