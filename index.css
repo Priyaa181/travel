@@ -11,6 +11,7 @@ border: 2px solid black;
     /* justify-content: center; */
     gap: 10px;
     list-style: none;
+    
    
 }
 .series li a{
@@ -27,13 +28,11 @@ border: 2px solid black;
     border: none;
     background-color: aquamarine;
 }
-
-#navbar input::placeholder{
-    color: black;
-}
 img{
-   
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
 }
+
+    
+   
