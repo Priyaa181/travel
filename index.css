@@ -34,5 +34,47 @@ img{
     border-radius: 50px;
 }
 
+.circal{
+    height: 80px;
+    width: 80px;
+    border: 1px solid red ;
+    border-radius: 50px;
+
+}
+
+    .id{
     
+       width:800px;
+       height:400 px;
+        border: 2px dotted orange;
+        border-left: 2px solid black ;
+        border-right: 2px dotted green;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px
+    
+        
+       
+    }
+
+
+
+    #box{
+
+
+        height: 500px;
+        width: 100%;
+        /* border: 1px solid black; */
+    }
+     .ok{
+        height: 50px;
+        width: 50px;
+        border: 1px solid black;
+        border-radius: 50px;
+    }
+    .okk{
+
+        height: 50px;
+        width: 50px;
+        border: 1px solid black;
+    }
    
