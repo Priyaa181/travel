@@ -11,8 +11,8 @@ width: 99%;
 display: flex;
 justify-content: space-between;
 align-items: center;
-position: absolute;
-position: relative;
+/* position: fixed; */
+overflow: hidden;
 }
 .first{
     padding-left: 30px;
@@ -31,7 +31,7 @@ margin-right: 700px;
       
 }
 .link li a:hover{
-    color:black;
+    color:rgb(166, 190, 149);
     font-size: 25px;
 }
 .link li a{
@@ -69,134 +69,187 @@ margin-right: 700px;
     padding-left: 20px;
     color: white;
     background-color: transparent;
-    /* font-size: 1rem; */
+
     outline: none;
     border: none;
 
-}
+} 
+.hamburger {
+  display: none;
+  font-size: 25px;
+  cursor: pointer;
+}   
+ @media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background: white;
+    border-top: 1px solid #ccc;
+  }
+
+  .link {
+    flex-direction: column;
+    text-align: center;
+    display: none; /* hide initially */
+    padding: 15px 0;
+  }
+
+  .link.show {
+    display: flex; /* toggle this with JS */
+  }
+
+  .second {
+    display: none; /* hide search bar on small screens */
+  }
+}   
+
+     
 #firstpage{
    
     height: 90vh;
     width: 99%;
-     border: 2px solid black;
-     background-image: url(https://thumbs.dreamstime.com/b/stunning-stock-photo-features-delicate-watecolor-daisy-painted-onto-pages-open-book-soft-pink-white-hues-272275726.jpg ) ;
-    background-size: cover;
-     background-position: center;
-     background-color: rgba(0, 0, 0,1);
+     /* border: 2px solid black; */
+   
+    
      
      display: flex;
-     gap: 10px;
-      position: relative;
-      /* z-index: 1; */
-}
-
-.icon{
-    
-    height: 90vh;
-    width: 150px;
-      border: 2px solid black;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction:column ;
-      gap: 20px;
-
-}
-.icon i{
-    color:rgb(66, 70, 58) ;
-}
-.lorem{
-    /* padding-top:100px ; */
-    height: 90vh;
-    width: 800px;
-     border: 2px solid black;
-  display: flex;
-      
-      flex-direction:column ;
-      gap: 20px;
+     gap: 30px;
+     justify-content: center;
+      flex-direction: column;
+       background-image: url(stunning-stock-photo-features-delicate-watercolor-daisy-painted-onto-pages-open-book-soft-pink-white-hues-272275726\ \(1\).webp) ;
+    background-size: cover;
+     background-position: center;
+     overflow: hidden;
      
 }
-.lorem h1{
-padding-top: 200px;
-    font-size: 60px;
-     
-z-index: 2;
+#firstpage h1{
+     /* color: rgb(107, 112, 95) ; */
+     font-size: 80px;
 }
-.lorem h4{
-    /* padding-top: 200px; */
-    
-    z-index: 2;
+#firstpage h4 :hover{
+     color: rgb(107, 112, 95) ;
+}
+#firstpage .icon-icon i{
+    size: 50px;
 }
 
-.lorem img{
-    position: absolute;
-    top: 450px;
-    left: 50px;
-    
-}
+
 
 .slider{
+   
 margin-top: 30px;
      height: 85vh;
     width: 500px;
-     border: 2px solid black;
+     /* border: 2px solid black; */
 background-color:rgb(156, 162, 142) ;
+display: flex;
+flex-direction: column;
+gap: 20px;
 }
 .slider1{
+/* padding-top: 40px; */
+/* margin-left: 60px; */
+height: 50vh;
+width:100%;
+/* border: 1px solid black; */
 
-height: 60vh;
-width: 100%;
-border: 1px solid black;
+background-image: url(http://pluspng.com/img-png/book-png-opened-book-png-transparent-image-1850.png);
+ background-size: cover;
+     background-position: center;
+
 
 }
-.slider2{
 
-height: 25vh;
-width: 100%;
-border: 1px solid black;
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 10px;
-flex-direction: column;
+@media (max-width: 768px) {
+  #firstpage {
+    height: auto;
+    text-align: center;
+    gap: 20px;
+    padding: 40px 15px;
+  }
+
+  #firstpage h1 {
+    font-size: 40px; /* smaller title */
+  }
+
+  #firstpage h4 {
+    font-size: 16px;
+  }
+
+  #firstpage .icon-icon {
+    justify-content: center;
+    font-size: 22px;
+  }
+
+  .slider {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    align-items: center;
+  }
+
+  .slider1 {
+    height: 250px;
+    width: 100%;
+    background-size: contain; /* fit image inside */
+    background-repeat: no-repeat;
+  }
 }
-.slider2 h1{
-    color:rgb(66, 70, 58) ;
+
+@media (max-width: 480px) {
+  #firstpage h1 {
+    font-size: 32px;
+  }
+
+  #firstpage h4 {
+    font-size: 14px;
+  }
+
+  .slider1 {
+    height: 200px;
+  }
 }
-.slider2 p{
-color: white;
-}
-.slider2 .lorem1{
-   color:rgb(66, 70, 58) ;  
-}
+ 
+
+
+
+
 #secondpage{
+    
 height: 90vh;
+
 width: 99%;
-border: 1px solid black;
+/* border: 1px solid black; */
 display: flex;
 }
 .okk1{
     height: 90vh;
     width: 50%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     
     background-image: url(book\ shel.avif);
     background-size: contain;
      background-position: center;
-  
-    
      
 }
- .okk2{
 
-    /* padding-top: 200px;  */
+ .okk2{
+     padding-left: 50px;
+   
       color:rgb(66, 70, 58) ; 
      height: 90vh;
     width: 50%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex; 
     gap: 50px;
     flex-direction: column;
+
 
 }
 .okk2 h1{
@@ -204,9 +257,998 @@ display: flex;
 font-size: 60px;
 }
 .okk2 p{
+
+
+
+}
+.okk2 p{
     font-size: 20px;
 }
+
 .okk button{
     width: 50px;
 
-}  
+}
+
+@media (max-width: 600px) {
+  #secondpage {
+    flex-direction: column;
+    height: auto; /* let content expand */
+  }
+
+  .okk1 {
+    width: 100%;
+    /* height: 100px; small banner on top */
+    background-size: cover;
+    background-position: center;
+  }
+
+  .okk2 {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .okk2 h1 {
+    font-size: 24px; /* smaller heading */
+    padding-top: 0;
+  }
+
+  .okk2 p {
+    font-size: 14px; /* smaller paragraph */
+    line-height: 1.4;
+  }
+
+  .okk2 p i {
+    font-size: 14px; /* arrow icon smaller */
+  }
+}
+
+
+
+   
+
+
+#thirdpage{
+    overflow: hidden;
+    height: 80vh;
+width: 99%;
+/* border: 1px solid black; */
+    background-image: url(https://w0.peakpx.com/wallpaper/334/304/HD-wallpaper-plain-sage-green-sage-green.jpg);
+     
+} 
+.heading{
+     height: 30vh;
+width: 100%;
+/* border: 1px solid rgb(171, 57, 57); */
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex-direction: column;
+}
+.heading h1{
+    font-size: 40px;
+} 
+
+.scroll{
+    
+        height: 360px;
+width:100%;
+/* border: 3px solid rgb(250, 5, 205); */
+  display:grid;
+  grid-template-columns:repeat(7,250px); 
+  overflow-x: scroll; 
+  scrollbar-width: none; 
+  gap: 30px;
+ 
+ }  
+.scroll1{
+   /* margin-top: 10px;
+    margin-left: 20px; */
+    
+     height:300px;
+width: 250px;
+/* border: 1px solid rgb(171, 57, 57);   */
+background-color: white;
+border-radius: 10px;
+}
+.scroll1:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px rgb(29, 29, 28);
+}
+.crack1 {
+    height:230px ;
+    width: 250px;
+    /* border: 1px solid rgb(87, 20, 103);  */
+    background-image: url(the-book-of-tea-classic-tea-edition-p261-339_zoom_1600x.webp);
+      background-size: contain;
+     background-position: center;
+     background-repeat: no-repeat;
+}
+.crack2{
+     height:68px ;
+    width: 250px;
+    /* border: 1px solid rgb(87, 20, 103);  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+ .scroll2{
+    
+     height: 300px;
+width: 250px;
+/* border: 1px solid rgb(171, 57, 57);  */
+background-color: white; 
+}
+.scroll2:hover{
+     transform: scale(1.1);
+    box-shadow: 0px 0px 20px rgb(29, 29, 28);
+}
+.crack3{
+    height:230px ;
+    width: 250px;
+    /* border: 1px solid rgb(87, 20, 103);  */
+    background-image: url(book2.png);
+      background-size: contain;
+     background-position: center;
+     background-repeat: no-repeat;
+}
+.crack4{
+     height:68px ;
+    width: 250px;
+    /* border: 1px solid rgb(87, 20, 103);  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.scroll3{
+    
+     height: 300px;
+width:250px;
+/* border: 1px solid rgb(171, 57, 57);   */
+background-color: white;
+}
+.scroll3:hover{
+     transform: scale(1.1);
+    box-shadow: 0px 0px 20px rgb(29, 29, 28);
+}
+.crack5 {
+    height:230px ;
+    width: 250px;
+    /* border: 1px solid rgb(87, 20, 103);  */
+    background-image: url(book3.jpg);
+      background-size: contain;
+     background-position: center;
+     background-repeat: no-repeat;
+}
+.crack6{
+     height:68px ;
+    width: 250px;
+    /* border: 1px solid rgb(87, 20, 103);  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.scroll4{
+    
+     height: 300px;
+width:250px;
+/* border: 1px solid rgb(171, 57, 57);  */
+background-color: white; 
+}
+.scroll4:hover{
+     transform: scale(1.1);
+    box-shadow: 0px 0px 20px rgb(29, 29, 28);
+}
+.crack7 {
+    height:230px ;
+    width: 250px;
+    /* border: 1px solid rgb(87, 20, 103);  */
+    background-image: url(book4.jpg);
+      background-size: contain;
+     background-position: center;
+     background-repeat: no-repeat;
+}
+.crack8{
+     height:68px ;
+    width: 250px;
+    /* border: 1px solid rgb(87, 20, 103);  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.scroll5{
+    
+     height:300px;
+width: 250px;
+/* border: 1px solid rgb(171, 57, 57);  */
+background-color: white; 
+}
+.scroll5:hover{
+     transform: scale(1.1);
+    box-shadow: 0px 0px 20px rgb(29, 29, 28);
+}
+.crack9 {
+    height:230px ;
+    width: 250px;
+    /* border: 1px solid rgb(87, 20, 103);  */
+    background-image: url(book5.jpg);
+      background-size: contain;
+     background-position: center;
+     background-repeat: no-repeat;
+}
+.crack10{
+     height:68px ;
+    width: 250px;
+    /* border: 1px solid rgb(87, 20, 103);  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.scroll6{
+    
+     height: 300px;
+width: 250px;
+/* border: 1px solid rgb(171, 57, 57);  */
+background-color: white; 
+}
+.scroll6:hover{
+     transform: scale(1.1);
+    box-shadow: 0px 0px 20px rgb(29, 29, 28);
+}
+.crack11{
+    height:230px ;
+    width: 250px;
+    /* border: 1px solid rgb(87, 20, 103);  */
+    background-image: url(book6.jpg);
+      background-size: contain;
+     background-position: center;
+     background-repeat: no-repeat;
+}
+.crack12{
+     height:68px ;
+    width: 250px;
+    /* border: 1px solid rgb(87, 20, 103);  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.scroll7{
+    
+     height: 300px;
+width: 250px;
+/* border: 1px solid rgb(171, 57, 57);   */
+background-color: white;
+} 
+.scroll7:hover{
+     transform: scale(1.1);
+    box-shadow: 0px 0px 20px rgb(29, 29, 28);
+}
+.crack13{
+    height:230px ;
+    width: 250px;
+    /* border: 1px solid rgb(87, 20, 103);  */
+    background-image: url(book1.webp);
+      background-size: contain;
+     background-position: center;
+     background-repeat: no-repeat;
+}
+.crack14{
+     height:68px ;
+    width: 250px;
+    /* border: 1px solid rgb(87, 20, 103);  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+ }
+@media (max-width: 600px) {
+  .heading h1 {
+    font-size: 24px;
+  }
+
+  .heading p {
+    font-size: 14px;
+  }
+
+  .scroll {
+    grid-template-columns: repeat(2, 150px); /* show 2 books at a time */
+    gap: 15px;
+    height: auto;
+    overflow-x: auto;
+    padding: 10px;
+    justify-content: start;
+  }
+
+  .scroll1, .scroll2, .scroll3, .scroll4,
+  .scroll5, .scroll6, .scroll7 {
+    width: 150px;
+    height: 220px;
+  }
+
+  .crack1, .crack3, .crack5, .crack7,
+  .crack9, .crack11, .crack13 {
+    width: 150px;
+    height: 160px;
+    background-size: contain;
+  }
+
+  .crack2, .crack4, .crack6, .crack8,
+  .crack10, .crack12, .crack14 {
+    width: 150px;
+    height: 60px;
+  }
+
+  .scroll1:hover, .scroll2:hover, .scroll3:hover,
+  .scroll4:hover, .scroll5:hover, .scroll6:hover, .scroll7:hover {
+    transform: scale(1.05); /* smaller hover effect on mobile */
+  }
+}
+
+#fourthpage{
+    overflow: hidden;
+   height: 90vh;
+width: 99%;
+/* border: 1px solid black; */
+display: flex;
+}
+.fourthpagediv1{
+ height: 90vh;
+width: 50%;
+/* border: 1px solid black; */
+ 
+
+}
+.fourthpagediv2{
+     height: 90vh;
+width: 50%;
+/* border: 1px solid rgb(17, 121, 45); */
+
+}
+.div1{
+    
+     height: 50vh;
+width: 152%;
+/* border: 1px solid rgb(208, 228, 24); */
+}
+.div1 h1{
+    font-size: 60px;
+      color:rgb(107, 117, 86) ;
+}
+.div1 p{
+     color:rgb(66, 70, 58) ;
+}
+.div2{
+   height: 20vh;
+width: 152%;
+/* border: 1px solid rgb(208, 228, 24);  */
+display: flex; 
+}
+.div3{
+   height: 20vh;
+width: 152%;
+/* border: 1px solid rgb(208, 228, 24);   */
+}
+
+.book12{
+      height: 35vh;
+width: 100%;
+/* border: 1px solid rgb(91, 16, 129);   */
+display: flex; 
+ gap: 40px; 
+ padding-top: 50px;
+
+
+}
+ .book1{
+    margin-left: 80px;
+     height: 30vh;
+width: 30%;
+/* border: 1px solid rgb(91, 16, 129);   */
+background-image: url(canva-brown-modern-history-book-cover-KLcHQQBmD-U.jpg);
+background-size: contain;
+     background-position: center;
+     background-repeat: no-repeat;
+      box-shadow: 0px 0px 15px 10px rgb(205, 204, 200);
+ }
+  .book2{
+     height: 30vh;
+width: 30%;
+/* border: 1px solid rgb(91, 16, 129); */
+background-image: url(c3e47b63dcb27eb305f5f162d185f740.jpg);
+background-size: contain;
+     background-position: center;
+     background-repeat: no-repeat;
+      box-shadow: 0px 0px 15px 10px rgb(205, 204, 200);
+ }
+ .book34{
+     height: 41vh;
+width: 100%;
+/* border: 1px solid rgb(91, 16, 129);   */
+display: flex;
+gap: 40px;
+padding-top: 50px;
+ }
+ .book3{
+    margin-left: 80px;
+     height: 35vh;
+width: 30%;
+/* border: 1px solid rgb(91, 16, 129);   */
+background-image: url(OldMission.jpg);
+background-size: contain;
+     background-position: center;
+     background-repeat: no-repeat;
+     box-shadow: 0px 0px 15px 10px rgb(205, 204, 200);
+ }
+
+  .book4{
+     height: 35vh;
+width: 30%;
+/* border: 1px solid rgb(91, 16, 129);   */
+background-image: url(the-magnificent-book-of-treasures-ancient-egypt-9781681885582_hr.jpg);
+background-size: contain;
+     background-position: center;
+     background-repeat: no-repeat;
+      box-shadow: 0px 0px 15px 10px rgb(205, 204, 200);
+ }
+
+.div2 .subb1{
+     height: 20vh;
+width: 33%;
+/* border: 1px solid rgb(138, 29, 114);  */
+display: flex; 
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex-direction: column;
+
+}
+.div2 .subb2{
+     height: 20vh;
+width: 33%;
+/* border: 1px solid rgb(138, 29, 114); */
+display: flex; 
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex-direction: column;  
+}
+.div2 .subb3{
+     height: 20vh;
+width: 33%;
+/* border: 1px solid rgb(138, 29, 114);  */
+display: flex; 
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex-direction: column; 
+}
+.div3 button{
+
+    height: 60px;
+    width: 300px;
+background:linear-gradient(  to right ,rgb(95, 126, 95), rgb(133, 154, 133),rgb(178, 199, 178));
+border-radius: 5px;
+font-size: 20px;
+color: white;
+
+}
+.div3 button:hover{
+    transform:scale(1.1);
+}
+.div3 i{
+    color: white;
+}
+@media (max-width: 600px) {
+  #fourthpage {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+  }
+
+  .fourthpagediv1, .fourthpagediv2 {
+    width: 100%;
+    height: auto;
+  }
+
+  .div1 {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .div1 h1 {
+    font-size: 28px;
+  }
+
+  .div1 p {
+    font-size: 14px;
+  }
+
+  .book12, .book34 {
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 20px;
+  }
+
+  .book1, .book2, .book3, .book4 {
+    width: 80%;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 10px 5px rgb(205, 204, 200);
+  }
+
+  .div2 {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    height: auto;
+  }
+
+  .div2 .subb1,
+  .div2 .subb2,
+  .div2 .subb3 {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .div3 button {
+    width: 80%;
+    font-size: 16px;
+  }
+}
+#fifthpage{
+    /* overflow: hidden; */
+      height: 70vh;
+width: 99%;
+/* border: 1px solid black; */
+}
+.last1{
+      height: 70vh;
+width: 100%;
+/* border: 1px solid rgb(196, 58, 58); */
+
+
+}
+.last1 h1{
+    font-size: 40px;
+      color:rgb(100, 106, 86) ;
+}
+.last1 p{
+      color:rgb(107, 117, 86) ;
+}
+.last2{
+      height:30vh;
+width: 100%;
+/* border: 1px solid rgb(225, 32, 32); */
+display: flex;
+gap: 20px;
+background-color: rgb(218, 223, 211);
+}
+
+.sublast1{
+  height: 30vh;
+width: 100%;
+/* border: 1px solid rgb(196, 58, 58);  */
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;  
+gap: 20px;
+}
+.sublast2{
+    /* padding-top: 10px; */
+  height: 40vh;
+width: 100%;
+/* border: 1px solid rgb(196, 58, 58);   */
+display: flex; 
+gap: 20px;
+}
+.ok1{
+    margin-left:100px ;
+ height: 30vh;
+width:15%;
+/* border: 1px solid rgb(18, 154, 72);  */
+
+}
+
+.sub1{
+    height:120px ;
+width:120px;
+/* border: 1px solid rgb(89, 57, 164); */
+
+border-radius: 50%;
+margin-left: 45px;
+background-image: url(shac.jpg);
+background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+   
+}
+.sub1:hover{
+  
+  transform: scale(1.1);
+}
+ 
+.sub2{
+    height:100px ;
+width:100%;
+/* border: 1px solid rgb(89, 57, 164); */
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap: 10px;
+}
+.sub2:hover{
+  
+  transform: scale(1.1);
+}
+.sub2 h3{
+    font-size: 25px;
+    color:rgb(88, 93, 79) ;
+}
+.sub2 p{
+    font-size: 20px;
+    color: rgb(211, 201, 201);
+}
+.ok2{
+    margin-left:30px ;
+ height: 30vh;
+width:15%;
+/* border: 1px solid rgb(18, 154, 72);  */
+}
+.sub3{
+    height:120px ;
+width:120px;
+border: 1px solid rgb(89, 57, 164);
+border-radius: 50%;
+background-image: url(RT-_0001_Best-Leo-Tolstoy-Books-1024x683.jpg);
+background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+margin-left: 45px;
+}
+.sub3:hover{
+  
+  transform: scale(1.1);
+}
+.sub4{
+    height:100px ;
+width:100%;
+/* border: 1px solid rgb(89, 57, 164); */
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap: 10px;
+}
+.sub4:hover{
+  
+  transform: scale(1.1);
+}
+.sub4 h3{
+    font-size: 25px;
+    color:rgb(88, 93, 79) ;
+}
+.sub4 p{
+    font-size: 20px;
+    color: rgb(211, 201, 201);
+}
+.ok3{
+    margin-left:30px ;
+ height: 30vh;
+width:15%;
+/* border: 1px solid rgb(18, 154, 72);  */
+}
+.sub5{
+    height:120px ;
+width:120px;
+/* border: 1px solid rgb(89, 57, 164); */
+border-radius: 50%;
+margin-left: 45px;
+background-image: url(1_Stephen-King-Portrait-Session.webp);
+background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+}
+.sub5:hover{
+  
+  transform: scale(1.1);
+}
+.sub6{
+    height:100px ;
+width:100%;
+/* border: 1px solid rgb(89, 57, 164); */
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap: 10px;
+}
+.sub6:hover{
+  
+  transform: scale(1.1);
+}
+.sub6 h3{
+    font-size: 25px;
+    color:rgb(88, 93, 79) ;
+}
+.sub6 p{
+    font-size: 20px;
+    color: rgb(211, 201, 201);
+}
+.ok4{
+    margin-left:30px ;
+ height: 30vh;
+width:15%;
+/* border: 1px solid rgb(18, 154, 72);  */
+}
+.sub7{
+    height:120px ;
+width:120px;
+/* border: 1px solid rgb(89, 57, 164); */
+border-radius: 50%;
+background-image: url(original.webp);
+background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+margin-left: 45px;
+}
+.sub7:hover{
+  
+  transform: scale(1.1);
+}
+.sub8{
+    height:100px ;
+width:100%;
+/* border: 1px solid rgb(89, 57, 164); */
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap: 10px;
+}
+.sub8:hover{
+  
+  transform: scale(1.1);
+}
+.sub8 h3{
+    font-size: 25px;
+   color:rgb(88, 93, 79) ;
+}
+.sub8 p{
+    font-size: 20px;
+    color: rgb(211, 201, 201);
+}
+.ok5{
+    margin-left:30px ;
+ height: 30vh;
+width:15%;
+/* border: 1px solid rgb(18, 154, 72);  */
+}
+.sub9{
+    height:120px ;
+width:120px;
+/* border: 1px solid rgb(89, 57, 164); */
+border-radius: 50%;
+background-image: url(OIP.jpg);
+background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+margin-left: 45px;
+}.sub9:hover{
+  
+  transform: scale(1.1);
+}
+
+.sub10{
+    height:100px ;
+width:100%;
+/* border: 1px solid rgb(89, 57, 164); */
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap: 10px;
+}
+.sub10:hover{
+  
+  transform: scale(1.1);
+}
+
+.sub10 h3{
+    font-size: 25px;
+     color:rgb(88, 93, 79) ;
+}
+.sub10 p{
+    font-size: 20px;
+    color: rgb(211, 201, 201);
+}
+.end1{
+      height:30vh ;
+width:40%;
+/* border: 1px solid rgb(89, 57, 164); */
+display: flex;
+justify-content: center;
+/* align-items: center; */
+flex-direction: column;
+gap: 20px;
+}
+.end1 h1{
+    font-size: 50px;
+    color:rgb(88, 93, 79) ;
+}
+.end1 p{ 
+    color:rgb(88, 93, 79) ;
+}
+.end2{
+      height:30vh ;
+width:30%;
+/* border: 1px solid rgb(89, 57, 164); */
+display: flex;
+justify-content: center;
+/* align-items: center; */
+flex-direction: column;
+}
+.end2 h1{
+    font-size: 35px;
+     color:rgb(88, 93, 79) ;
+}
+.end2 samp{
+    font-size: 20px;
+    color:rgb(88, 93, 79) ; 
+}
+.end2 p{
+     color:rgb(141, 148, 127) ;
+}
+.end3{
+      height:30vh ;
+width:30%;
+/* border: 1px solid rgb(89, 57, 164); */
+
+}
+.end3 form{
+    height: 40px;
+    width:300px;
+    
+    display: flex;
+     border-radius: 5px;
+}
+.end3 p{
+       color:rgb(70, 74, 63) ;
+}
+.end3 button{
+    background-color: rgb(149, 156, 135);
+    color: white;
+    width: 150px;
+   outline: none;
+   border: none;
+}
+.end3 input{
+       outline: none;
+   border: none;
+}
+
+@media (max-width: 600px) {
+
+  #fifthpage {
+    height: auto;
+    width: 100%;
+  }
+
+  .last1, .last2 {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+  }
+
+  /* Favorite Author Section */
+  .sublast1 {
+    height: auto;
+    padding: 20px;
+  }
+
+  .sublast1 h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .sublast1 p {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .sublast2 {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  .ok1, .ok2, .ok3, .ok4, .ok5 {
+    width: 40%;
+    height: auto;
+    margin-left: 0;
+  }
+
+  .sub1, .sub3, .sub5, .sub7, .sub9 {
+    width: 80px;
+    height: 80px;
+    margin-left: 0;
+  }
+
+  .sub2, .sub4, .sub6, .sub8, .sub10 h3 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .sub2, .sub4, .sub6, .sub8, .sub10 p {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  /* Footer Section */
+  .last2 {
+    flex-direction: column;
+    height: auto;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .end1, .end2, .end3 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .end1 h1 {
+    font-size: 28px;
+  }
+
+  .end2 h1 {
+    font-size: 24px;
+  }
+
+  .end2 p, .end2 samp, .end3 p {
+    font-size: 14px;
+  }
+
+  .end3 form {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .end3 input {
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+  }
+
+  .end3 button {
+    width: 100%;
+    height: 40px;
+  }
+}
