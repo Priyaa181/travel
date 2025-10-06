@@ -76,37 +76,52 @@ margin-right: 700px;
 } 
 .hamburger {
   display: none;
-  font-size: 25px;
-  cursor: pointer;
-}   
- @media (max-width: 768px) {
-  .hamburger {
+  font-size: 30px;
+  /* cursor: pointer; */
+}  
+ .first h2 {
+
+   display: none;
+}  
+ @media (max-width: 600px) {
+   
+
+  .first h2{
+     display: block;
+  }
+
+  nav ul{
+     position: absolute;
+     top: 60px;
+     right:0;
+     left: 0;
+     /* flex-direction: column;
+    text-align: center; */
+    
+
+    /* width: 100%; */
+    /* background: rgb(212, 211, 211); */
+    /* border-top: 1px solid #ccc;  */
+  }
+ .second{
+  display: none;
+  
+ }
+ .hamburger {
     display: block;
-  }
-
-  nav {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    background: white;
-    border-top: 1px solid #ccc;
-  }
-
-  .link {
+  } 
+   .link {
     flex-direction: column;
     text-align: center;
-    display: none; /* hide initially */
-    padding: 15px 0;
+    display: none;  
+     padding: 15px 0;
   }
 
   .link.show {
-    display: flex; /* toggle this with JS */
+    display: flex;
   }
 
-  .second {
-    display: none; /* hide search bar on small screens */
-  }
+  
 }   
 
      
@@ -166,54 +181,54 @@ background-image: url(http://pluspng.com/img-png/book-png-opened-book-png-transp
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   #firstpage {
     height: auto;
     text-align: center;
-    gap: 20px;
-    padding: 40px 15px;
+    /* gap: 20px; */
+    /* padding: 40px 15px; */
   }
 
-  #firstpage h1 {
-    font-size: 40px; /* smaller title */
+   #firstpage h1 {
+    /* font-size: 40px; smaller title */
   }
 
   #firstpage h4 {
-    font-size: 16px;
+    /* font-size: 16px; */
   }
 
   #firstpage .icon-icon {
-    justify-content: center;
-    font-size: 22px;
+    /* justify-content: center; */
+    /* font-size: 22px; */
   }
 
   .slider {
-    width: 100%;
-    height: auto;
-    padding: 20px;
-    align-items: center;
+    /* width: 100%; */
+    /* height: auto; */
+    /* padding: 20px; */
+    /* align-items: center; */
   }
 
   .slider1 {
-    height: 250px;
-    width: 100%;
-    background-size: contain; /* fit image inside */
-    background-repeat: no-repeat;
+    /* height: 250px; */
+    width: 90%;
+    /* background-size: contain; fit image inside */
+    /* background-repeat: no-repeat; */
   }
 }
 
 @media (max-width: 480px) {
-  #firstpage h1 {
-    font-size: 32px;
+   #firstpage h1 { 
+    /* font-size: 32px; */
   }
 
   #firstpage h4 {
-    font-size: 14px;
+    /* font-size: 14px; */
   }
 
   .slider1 {
-    height: 200px;
-  }
+    /* height: 200px; */
+  } 
 }
  
 
@@ -272,21 +287,25 @@ font-size: 60px;
 
 @media (max-width: 600px) {
   #secondpage {
+    padding-top: 30px;
     flex-direction: column;
-    height: auto; /* let content expand */
+    /* gap: 10px; */
+    height: 800px; 
   }
 
   .okk1 {
     width: 100%;
-    /* height: 100px; small banner on top */
+    height: 300px; 
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
   }
 
   .okk2 {
+    height:250px ;
     width: 100%;
     padding: 20px;
-    text-align: center;
+    /* text-align: center; */
     align-items: center;
     gap: 15px;
   }
@@ -298,11 +317,11 @@ font-size: 60px;
 
   .okk2 p {
     font-size: 14px; /* smaller paragraph */
-    line-height: 1.4;
+    /* line-height: 1.4; */
   }
 
   .okk2 p i {
-    font-size: 14px; /* arrow icon smaller */
+    font-size: 15px; /* arrow icon smaller */
   }
 }
 
@@ -312,7 +331,7 @@ font-size: 60px;
 
 
 #thirdpage{
-    overflow: hidden;
+    /* overflow: hidden; */
     height: 80vh;
 width: 99%;
 /* border: 1px solid black; */
@@ -328,6 +347,7 @@ justify-content: center;
 align-items: center;
 gap: 10px;
 flex-direction: column;
+flex-wrap: wrap;
 }
 .heading h1{
     font-size: 40px;
@@ -353,7 +373,7 @@ width:100%;
 width: 250px;
 /* border: 1px solid rgb(171, 57, 57);   */
 background-color: white;
-border-radius: 10px;
+/* border-radius: 10px; */
 }
 .scroll1:hover{
     transform: scale(1.1);
@@ -562,6 +582,10 @@ background-color: white;
 
  }
 @media (max-width: 600px) {
+  #thirdpage{
+    width: 100;
+    height: 850px;
+  }
   .heading h1 {
     font-size: 24px;
   }
@@ -571,23 +595,29 @@ background-color: white;
   }
 
   .scroll {
-    grid-template-columns: repeat(2, 150px); /* show 2 books at a time */
-    gap: 15px;
-    height: auto;
-    overflow-x: auto;
-    padding: 10px;
-    justify-content: start;
+    margin-left: 30px;
+    width:90%;
+    /* margin-right: 10px; */
+    grid-template-rows: repeat(2, 150px); /* show 2 books at a time */
+    gap: 10px;
+    height: 400px;
+    /* overflow-x: auto; */
+    /* padding-left: 10px; */
+    /* padding-right: 10px; */
+    /* justify-content: center; */
   }
 
   .scroll1, .scroll2, .scroll3, .scroll4,
   .scroll5, .scroll6, .scroll7 {
-    width: 150px;
-    height: 220px;
+
+    width: 200px;
+
+    height: 230px;
   }
 
   .crack1, .crack3, .crack5, .crack7,
   .crack9, .crack11, .crack13 {
-    width: 150px;
+    width: 200px;
     height: 160px;
     background-size: contain;
   }
@@ -610,6 +640,7 @@ background-color: white;
 width: 99%;
 /* border: 1px solid black; */
 display: flex;
+flex-wrap: wrap;
 }
 .fourthpagediv1{
  height: 90vh;
@@ -760,19 +791,23 @@ color: white;
 }
 @media (max-width: 600px) {
   #fourthpage {
-    flex-direction: column;
-    height: auto;
+    flex-direction:row;
+    /* gap: 10px; */
+      height: 800px;  
     width: 100%;
   }
 
-  .fourthpagediv1, .fourthpagediv2 {
+  .fourthpagediv1{
     width: 100%;
-    height: auto;
   }
-
-  .div1 {
+  .fourthpagediv2{
     width: 100%;
-    height: auto;
+    text-align: center;
+  }
+  
+   .div1 {
+    width: 10%;
+    /* height: auto; */
     padding: 20px;
   }
 
@@ -784,22 +819,26 @@ color: white;
     font-size: 14px;
   }
 
-  .book12, .book34 {
-    flex-direction: column;
-    gap: 20px;
+  /* .book12, .book34 {
+    /* flex-direction: column; */
+    /* gap: 20px;
     padding-top: 20px;
-  }
+  } */ 
 
   .book1, .book2, .book3, .book4 {
-    width: 80%;
+    width: 40%;
     height: 200px;
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0px 0px 10px 5px rgb(205, 204, 200);
   }
+  .book12{
+    height: 300px;
+    margin:auto ;
 
+  }
   .div2 {
-    flex-direction: column;
+    /* flex-direction: column; */
     gap: 15px;
     width: 100%;
     height: auto;
@@ -809,14 +848,14 @@ color: white;
   .div2 .subb2,
   .div2 .subb3 {
     width: 80%;
-    height: auto;
-    margin: 0 auto;
+    /* height: auto; */
+    /* margin: 0 auto; */
   }
 
   .div3 button {
-    width: 80%;
+    width: 50%;
     font-size: 16px;
-  }
+  } 
 }
 #fifthpage{
     /* overflow: hidden; */
@@ -863,6 +902,7 @@ gap: 20px;
 width: 100%;
 /* border: 1px solid rgb(196, 58, 58);   */
 display: flex; 
+flex-wrap: wrap;
 gap: 20px;
 }
 .ok1{
@@ -1124,6 +1164,8 @@ flex-direction: column;
      color:rgb(141, 148, 127) ;
 }
 .end3{
+  /* margin-top: 50px; */
+  padding-top: 50px;
       height:30vh ;
 width:30%;
 /* border: 1px solid rgb(89, 57, 164); */
@@ -1153,13 +1195,11 @@ width:30%;
 
 @media (max-width: 600px) {
 
-  #fifthpage {
-    height: auto;
-    width: 100%;
-  }
+ 
 
   .last1, .last2 {
     flex-direction: column;
+    gap: 20px;
     height: auto;
     width: 100%;
   }
@@ -1171,8 +1211,8 @@ width:30%;
   }
 
   .sublast1 h1 {
-    font-size: 28px;
-    text-align: center;
+    font-size: 38px;
+    /* text-align: center; */
   }
 
   .sublast1 p {
@@ -1181,23 +1221,27 @@ width:30%;
   }
 
   .sublast2 {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
+    
+     flex-wrap: wrap;
+    justify-content: center;  
+    gap: 10px;
     height: auto;
     padding-bottom: 20px;
   }
 
   .ok1, .ok2, .ok3, .ok4, .ok5 {
-    width: 40%;
-    height: auto;
-    margin-left: 0;
+    width: 60%;
+    height: 250px;
+     /* margin: 50px; */
+  }
+  .ok1{
+    margin-left: 10px;
   }
 
   .sub1, .sub3, .sub5, .sub7, .sub9 {
     width: 80px;
     height: 80px;
-    margin-left: 0;
+    margin-left: 100px;
   }
 
   .sub2, .sub4, .sub6, .sub8, .sub10 h3 {
@@ -1213,42 +1257,47 @@ width:30%;
   /* Footer Section */
   .last2 {
     flex-direction: column;
-    height: auto;
+    height:800px;
     gap: 20px;
     padding: 20px;
   }
 
   .end1, .end2, .end3 {
+
     width: 100%;
     text-align: center;
+    
   }
 
-  .end1 h1 {
-    font-size: 28px;
+   .end1 h1 {
+    font-size: 38px;
   }
 
   .end2 h1 {
-    font-size: 24px;
-  }
-
+    font-size: 38px;
+  } 
+ .end3 h1{
+   font-size: 38px;
+ }
   .end2 p, .end2 samp, .end3 p {
     font-size: 14px;
   }
 
   .end3 form {
-    width: 100%;
-    flex-direction: column;
-    gap: 10px;
+    padding-left: 150px;
+    width: 90%;
+    flex-direction:row;
+    
   }
 
   .end3 input {
-    width: 100%;
+    width: 30%;
     height: 40px;
-    padding-left: 10px;
+    /* padding-left: 10px; */
   }
 
   .end3 button {
-    width: 100%;
+    width: 20%;
     height: 40px;
   }
 }
